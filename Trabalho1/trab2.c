@@ -1,4 +1,4 @@
-//Trabalho 1 - Threads:
+//Trabalho 2 - Threads:
 //Jailton Nunes Filho
 //Pedro Henrique Marques de Labio
 
@@ -115,22 +115,35 @@ int main(){
 	printf("Matriz A: \n");
 	for(int i=0; i<linhaA; i++){
                 printf("| ");
-                for(int j=0; j<coluna_linha; j++)
-                        printf("%d\t", A[i][j]);
+                for(int j=0; j<coluna_linha; j++){
+                	if(j != coluna_linha - 1)
+				printf("%d\t", A[i][j]);
+			else
+				printf("%d", A[i][j]);
+		}
                 printf("|\n");
         }
 	printf("Matriz B: \n");
 	for(int i=0; i<coluna_linha; i++){
                 printf("| ");
-                for(int j=0; j<colunaB; j++)
-                        printf("%d\t", B[i][j]);
-                printf("|\n");
+                for(int j=0; j<colunaB; j++){
+			if(j != colunaB - 1)
+				printf("%d\t", B[i][j]);
+			else
+				printf("%d", B[i][j]);
+		}
+		printf("|\n");
         }
 	printf("Matriz C: \n");
 	for(int i=0; i<linhaA; i++){
 		printf("| ");
-		for(int j=0; j<colunaB; j++)
-			printf("%d\t", C[i][j]);
+		for(int j=0; j<colunaB; j++){
+			if(j != colunaB - 1)
+				printf("%d\t", C[i][j]);
+			else
+				printf("%d", C[i][j]);
+
+		}
 		printf("|\n");
 	}
 
